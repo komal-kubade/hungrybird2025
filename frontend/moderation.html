@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moderation Dashboard - Forum</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>💬 Forum - Moderation</h1>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="btn btn-secondary btn-small">← Back to Forum</a>
+                <span id="username-display" class="username"></span>
+                <span id="user-role-badge" class="role-badge"></span>
+                <button id="logout-btn" class="btn btn-secondary btn-small">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <div class="container main-content">
+        
+        <!-- Moderation Dashboard -->
+        <div class="topics-section">
+            <div class="section-header">
+                <h2>🚨 Reported Posts</h2>
+                <div id="reports-count" class="topics-count"></div>
+            </div>
+            
+            <div id="reported-posts-list" class="posts-list">
+                <div class="loading">
+                    <div class="spinner"></div>
+                    <p>Loading reported posts...</p>
+                </div>
+            </div>
+            
+            <!-- Pagination -->
+            <div id="pagination" class="pagination"></div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast hidden">
+        <span id="toast-message"></span>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/moderation.js"></script>
+</body>
+</html>
